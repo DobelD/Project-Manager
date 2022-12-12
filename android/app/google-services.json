@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973580568833",
+    "project_id": "dobeld",
+    "storage_bucket": "dobeld.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973580568833:android:7456162dcce733a2d17300",
+        "android_client_info": {
+          "package_name": "com.example.dobeld_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973580568833-415tkpfbg3lceti21tlgkr7k3qifv2aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgulWx4WNC2XdBvOddnAg_jtzxVpmsmSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973580568833-415tkpfbg3lceti21tlgkr7k3qifv2aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
