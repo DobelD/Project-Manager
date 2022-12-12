@@ -2,8 +2,8 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:dobeld_project/controller/navbar_ctrl.dart';
 import 'package:dobeld_project/pages/view/client.dart';
 import 'package:dobeld_project/pages/view/home.dart';
+import 'package:dobeld_project/pages/view/profile.dart';
 import 'package:dobeld_project/pages/view/team.dart';
-import 'package:dobeld_project/pages/widget/profile/chattawk.dart';
 import 'package:dobeld_project/routes/routes.dart';
 import 'package:dobeld_project/component/style.dart';
 import 'package:flutter/material.dart';
@@ -12,22 +12,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:iconsax/iconsax.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({super.key});
-
-  @override
-  State<NavBar> createState() => _NavBarState();
-}
-
-class _NavBarState extends State<NavBar> {
+class NavBar extends StatelessWidget {
   final controller = Get.put(NavbarController());
+
+  NavBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<NavbarController>(builder: (context) {
       return Scaffold(
         body: IndexedStack(
           index: controller.tabIndex,
-          children: const [Home(), Team(), Team(), Client(), ChatTawk()],
+          children: const [Home(), Team(), Team(), Client(), Profile()],
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: secondC,

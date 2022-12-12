@@ -1,11 +1,14 @@
 import 'package:dobeld_project/component/style.dart';
+import 'package:dobeld_project/controller/login_ctrl.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
 Widget headerProfil(BuildContext context) {
   double height = MediaQuery.of(context).size.height;
   double width = MediaQuery.of(context).size.width;
+  final controller = Get.put(LoginController());
   return Column(
     children: [
       Container(
@@ -38,7 +41,7 @@ Widget headerProfil(BuildContext context) {
                             shape: BoxShape.circle,
                             image: DecorationImage(
                                 image: NetworkImage(
-                                    'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'),
+                                    'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'),
                                 fit: BoxFit.cover)),
                       ),
                     ),
@@ -49,14 +52,14 @@ Widget headerProfil(BuildContext context) {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Erzo Lato',
+                        'Ali Imron',
                         style: GoogleFonts.poppins(
-                            fontSize: 14,
+                            fontSize: 16,
                             color: whiteC,
                             fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        'Erzo Lato',
+                        'Project Manager',
                         style: GoogleFonts.poppins(
                             fontSize: 12,
                             color: whiteC.withOpacity(0.8),
@@ -66,10 +69,12 @@ Widget headerProfil(BuildContext context) {
                   ),
                 ],
               ),
-              Icon(
-                Iconsax.setting_2,
-                color: whiteC,
-              )
+              IconButton(
+                  onPressed: () => controller.logOut(),
+                  icon: Icon(
+                    Iconsax.logout,
+                    color: whiteC,
+                  ))
             ],
           )),
     ],

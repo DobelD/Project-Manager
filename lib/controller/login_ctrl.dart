@@ -33,9 +33,9 @@ class LoginController extends GetxController {
           if (role == "admin") {
             Get.offAllNamed(AppPage.navbar);
           } else if (role == "user") {
-            Get.toNamed(AppPage.welcome);
+            Get.toNamed(AppPage.usernav);
           } else {
-            Get.toNamed(AppPage.register);
+            Get.toNamed(AppPage.kliennav);
           }
         }
         isLoading.value = false;

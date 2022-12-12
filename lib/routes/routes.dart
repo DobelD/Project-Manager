@@ -14,6 +14,14 @@ import 'package:dobeld_project/pages/view/project.dart';
 import 'package:dobeld_project/pages/view/team.dart';
 import 'package:dobeld_project/pages/widget/home/search.dart';
 import 'package:dobeld_project/pages/widget/profile/chat.dart';
+import 'package:dobeld_project/roles/klien/klien_nav.dart';
+import 'package:dobeld_project/roles/klien/pages/chat.dart';
+import 'package:dobeld_project/roles/klien/pages/home.dart';
+import 'package:dobeld_project/roles/klien/pages/profile.dart';
+import 'package:dobeld_project/roles/user/pages/chat.dart';
+import 'package:dobeld_project/roles/user/pages/home.dart';
+import 'package:dobeld_project/roles/user/pages/profile.dart';
+import 'package:dobeld_project/roles/user/user_nav.dart';
 import 'package:dobeld_project/routes/navbar.dart';
 import 'package:get/get.dart';
 
@@ -36,6 +44,17 @@ class AppPage {
   static String announcement = '/announcement';
   static String chat = '/chat';
 
+  // User Rols
+  static String usernav = '/usernav';
+  static String homeuser = '/homeuser';
+  static String profileuser = '/profileuser';
+  static String chatuser = '/chatuser';
+  // Klien Rols
+  static String kliennav = '/kliennav';
+  static String homeklien = '/homeklien';
+  static String profileklien = '/profileklien';
+  static String chatklien = '/chatklien';
+
   static getSplash() => splash;
   static getWelcome() => welcome;
   static getLogin() => login;
@@ -53,6 +72,17 @@ class AppPage {
   static getDetailProject() => detailProject;
   static getAnnouncement() => announcement;
   static getChat() => chat;
+
+  // User Rols
+  static getnavuser() => usernav;
+  static gethomeuser() => homeuser;
+  static getprofileuser() => profileuser;
+  static getchatuser() => chatuser;
+  // Klien Rols
+  static getnavklien() => kliennav;
+  static gethomeklien() => homeklien;
+  static getprofileklien() => profileklien;
+  static getchatklien() => chatklien;
 
   static List<GetPage> pages = [
     GetPage(name: splash, page: () => const SplasScreen()),
@@ -79,6 +109,14 @@ class AppPage {
     GetPage(name: project, page: () => const Project()),
     GetPage(name: detailProject, page: () => const DetailProject()),
     GetPage(name: announcement, page: () => const Announcement()),
-    GetPage(name: chat, page: () => const Chat())
+    GetPage(name: chat, page: () => const Chat()),
+    GetPage(name: usernav, page: () => UserNav()),
+    GetPage(name: homeuser, page: () => const HomeUser()),
+    GetPage(name: profileuser, page: () => const ProfileUser()),
+    GetPage(name: chatuser, page: () => const ChatUser()),
+    GetPage(name: kliennav, page: () => KlienNav()),
+    GetPage(name: homeklien, page: () => const HomeKlien()),
+    GetPage(name: profileklien, page: () => const ProfileKlien()),
+    GetPage(name: chatklien, page: () => const ChatKlien()),
   ];
 }
