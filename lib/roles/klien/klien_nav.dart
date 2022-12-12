@@ -1,13 +1,11 @@
-import 'package:avatar_glow/avatar_glow.dart';
-import 'package:dobeld_project/component/style.dart';
 import 'package:dobeld_project/roles/klien/pages/home.dart';
 import 'package:dobeld_project/roles/klien/pages/profile.dart';
 import 'package:dobeld_project/roles/user/controller/usernav_ctrl.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:iconly/iconly.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../routes/routes.dart';
 
@@ -25,11 +23,11 @@ class KlienNav extends StatelessWidget {
           children: const [HomeKlien(), ProfileKlien(), ProfileKlien()],
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: secondC,
+          backgroundColor: HexColor("251749"),
           onPressed: () {
             Get.toNamed(AppPage.chatklien);
           },
-          child: const AvatarGlow(endRadius: 30, child: Icon(Iconsax.add)),
+          child: const Icon(IconlyLight.chat),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
@@ -39,7 +37,7 @@ class KlienNav extends StatelessWidget {
             child: BottomNavigationBar(
                 currentIndex: controller.tabIndex,
                 onTap: controller.changeIndex,
-                selectedItemColor: secondC,
+                selectedItemColor: HexColor("251749"),
                 unselectedItemColor: Colors.grey.shade400,
                 selectedLabelStyle: GoogleFonts.poppins(fontSize: 14),
                 unselectedLabelStyle: GoogleFonts.poppins(fontSize: 14),
@@ -50,7 +48,6 @@ class KlienNav extends StatelessWidget {
                 elevation: 0,
                 items: [
                   _itemNavbar(IconlyBold.home, 'Home'),
-                  _itemNavbar(IconlyBold.user_3, 'Team'),
                   const BottomNavigationBarItem(
                     icon: Icon(
                       Icons.home,
@@ -58,7 +55,6 @@ class KlienNav extends StatelessWidget {
                     ),
                     label: 'label',
                   ),
-                  _itemNavbar(IconlyBold.chart, 'Client'),
                   _itemNavbar(IconlyBold.profile, 'Profile')
                 ])),
       );

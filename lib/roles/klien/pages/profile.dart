@@ -2,6 +2,7 @@ import 'package:dobeld_project/component/style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../controller/login_ctrl.dart';
@@ -20,14 +21,14 @@ class ProfileKlien extends StatelessWidget {
         Container(
           height: height * 0.05,
           width: width,
-          color: secondC,
+          color: HexColor("251749"),
         ),
         Container(
             padding: const EdgeInsets.all(15),
             height: height * 0.15,
             width: width,
             decoration: BoxDecoration(
-              color: secondC,
+              color: HexColor("251749"),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
